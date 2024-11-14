@@ -5,6 +5,8 @@ import torchvision
 import torchvision.transforms as transforms
 from ResNet import ResNet18Approx, ResNet34Approx
 from DenseNet import DenseNet121Approx, DenseNet169Approx
+from MobileNet import MobileNetV1Approx
+from EfficientNet import EfficientNetB0Approx
 
 # Training Function for Approximate Models
 def train_approx_model(model, num_epochs=10):
@@ -73,3 +75,9 @@ if __name__ == "__main__":
 
     print("\nTraining DenseNet169 Approx...")
     train_approx_model(DenseNet169Approx, num_epochs=10)
+    
+    print("\nTraining MobileNet Approx...")
+    train_approx_model(MobileNetV1Approx, num_epochs=10)
+    
+    print("\nTraining EfficientNet Approx...")
+    train_approx_model(EfficientNetB0Approx, num_epochs=10)
